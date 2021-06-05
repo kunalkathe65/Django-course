@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{% load static %}
+{% block css_file %}
+    <link rel="stylesheet" href="{% static "blog/css/index.css" %}" />
+{% endblock %}
+{% block content %}
+    {% include "blog/includes/header.html" %}
+    <section id="welcome">
+
+        <header>
+            <img src="{% static "blog/images/max.png" %}" alt="Kunal - The author of this blog" />
+            <h2>KUNAL'S BLOG</h2>
+        </header>
+        <p>Hi, I'm Kunal and I love to post about tech.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My latest thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="{% static "blog/images/mountains.jpg" %}" alt="Mountain Hiking" />
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>I love mountains. They're great stress busters.</p>
+                        </div> 
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h3>What I do ? </h3>
+        <p>I love programming and I love other get succeed in this field</p>
+    </section>
+
+{% endblock %}
